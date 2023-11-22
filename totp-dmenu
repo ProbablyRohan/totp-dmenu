@@ -1,0 +1,16 @@
+#!/bin/bash
+
+BEMENU="bemenu -c -l 10 -B 1 -R 10 -M 500 -p : \
+	--nb "#282828e6" --hb "#282828e6" --ab "#282828e6" --tb "#282828e6" \
+	--fb "#282828e6" --bdr "#ebdbb2" --nf "#ebdbb2" --af "#ebdbb2" \
+  --hf "#98971a" --tf "#ebdbb2" --ff "#ebdbb2" --cf "#ebdbb2" -i"
+
+PSWD=$(dmenu -p "$1" <&- && echo) 
+ACCOUNT=$(echo $PSWD | totp-cli list home | sed "s/.*\.//" | $BEMENU | sed "s/.*\.//")
+CODE=$(echo $PSWD | totp-cli generate home $ACCOUNT)
+
+if [[ $ACCOUNT != "" ]]
+then 
+  notify-send "$ACCOUNT code is $CODE"
+  wl-copy $CODE
+fi
