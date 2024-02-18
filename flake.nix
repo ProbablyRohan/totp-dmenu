@@ -15,7 +15,7 @@
         pname = "totp-dmenu";
         version = "0.0.1";
         src = self;
-        buildInputs = with pkgs; [bemenu];
+        buildInputs = with pkgs; [ totp-cli.defaultPackage.x86_64-linux pkgs.bemenu ];
         installPhase = ''
           mkdir -p $out/bin
           cp totp-dmenu $out/bin/totp-dmenu
