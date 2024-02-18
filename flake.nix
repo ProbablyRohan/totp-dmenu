@@ -3,9 +3,10 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    totp-cli.url = "github:probablyrohan/totp-cli";
   };
 
-  outputs = { self, nixpkgs }: {
+  outputs = { self, nixpkgs, totp-cli }: {
 
     defaultPackage.x86_64-linux = 
 
@@ -14,13 +15,11 @@
         pname = "totp-dmenu";
         version = "0.0.1";
         src = self;
+        buildInputs = with pkgs; [bemenu];
         installPhase = ''
           mkdir -p $out/bin
           cp totp-dmenu $out/bin/totp-dmenu
         '';
-#          wrapProgram $out/bin/totp-dmenu \
-#          --prefix PATH : ${lib.makeBinPath [ bash ]}
-#        '';
       };
 
   };
