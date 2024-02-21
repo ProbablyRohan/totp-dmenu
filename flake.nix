@@ -8,7 +8,7 @@
 
   outputs = { self, nixpkgs, totp-cli }: {
 
-    defaultPackage.x86_64-linux = 
+    packages.x86_64-linux.default = 
 
       with import nixpkgs { system = "x86_64-linux"; };
       stdenv.mkDerivation {
