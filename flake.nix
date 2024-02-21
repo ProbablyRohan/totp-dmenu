@@ -25,7 +25,8 @@
           --set PATH ${lib.makeBinPath [ 
             totp-cli.defaultPackage.x86_64-linux 
             pkgs.bemenu
-            pkgs.dmenu
+            pkgs.wl-clipboard
+            pkgs.libnotify
             pkgs.gnused ]}
         '';
 
