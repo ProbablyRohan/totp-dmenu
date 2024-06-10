@@ -3,7 +3,10 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    totp-cli.url = "github:probablyrohan/totp-cli";
+    totp-cli = {
+      url = "github:probablyrohan/totp-cli";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, totp-cli }: {
