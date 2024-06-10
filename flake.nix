@@ -26,7 +26,7 @@
         postFixup = ''
           wrapProgram $out/bin/totp-dmenu \
           --set PATH ${lib.makeBinPath [ 
-            totp-cli.defaultPackage.x86_64-linux 
+            totp-cli.packages.x86_64-linux.default 
             pkgs.bemenu
             pkgs.wl-clipboard
             pkgs.libnotify
