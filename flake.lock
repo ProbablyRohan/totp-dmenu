@@ -2,11 +2,11 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1734424634,
-        "narHash": "sha256-cHar1vqHOOyC7f1+tVycPoWTfKIaqkoe1Q6TnKzuti4=",
+        "lastModified": 1742669843,
+        "narHash": "sha256-G5n+FOXLXcRx+3hCJ6Rt6ZQyF1zqQ0DL0sWAMn2Nk0w=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "d3c42f187194c26d9f0309a8ecc469d6c878ce33",
+        "rev": "1e5b653dff12029333a6546c11e108ede13052eb",
         "type": "github"
       },
       "original": {
@@ -29,11 +29,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1734666888,
-        "narHash": "sha256-xIjdNEJd6DIskfApRMq/Q4E90cb7flZ91R9F37TlVIQ=",
+        "lastModified": 1742879938,
+        "narHash": "sha256-vxi6D1kt/Xv5kRArZzDrfS2ro7lMWi1p2dfLyyB5kT0=",
         "owner": "probablyrohan",
         "repo": "totp-cli",
-        "rev": "c0e4c4f7b001b9f4aca32445c501026d95cef89c",
+        "rev": "db97af73ac34821e2fa62c0066c6fe1d475c3de6",
         "type": "github"
       },
       "original": {
